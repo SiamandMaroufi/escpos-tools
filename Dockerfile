@@ -25,6 +25,7 @@ RUN echo 'echo $1 | base64 --decode > decoded.txt ; php /var/www/html/esc2html.p
 RUN chmod +x /usr/bin/text
 RUN chmod +x /usr/bin/html
 RUN chmod -R 777 /var/www/html
+CMD apachectl -D FOREGROUND
 
-RUN apachectl start
+
 
